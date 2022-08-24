@@ -1,0 +1,47 @@
+package tp7_ej8_CompaniaEnvios;
+
+public class Persona {
+    private String nombre;
+    private String ciudad;
+    private String direccion;
+
+    public Persona (String nombre, String ciudad,String direccion){
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+        this.direccion = direccion;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        Persona otra = (Persona)obj;
+        return this.getCiudad().equals(otra.getCiudad());
+    }
+    
+    @Override
+    public String toString(){
+        return "Persona nombre Apellido: "+this. getNombre()+" Ciudad: " +this.getCiudad()+ " Direccion: "+ this.getDireccion();
+    }
+    
+}
+
